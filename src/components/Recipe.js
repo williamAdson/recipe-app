@@ -1,23 +1,13 @@
+import IngredientList from './IngredientsList'
+import IngredientsStep from './IngredientsStep';
+
 function Recipe({name, ingredients, steps}){
     return(
         <>
             <section>
                 <h1>{name}</h1>
-                <ul>
-                    {ingredients.map((ingredient, i)=>(
-                        <li key={i}>
-                            {ingredient.name}
-                        </li>
-                    ))}
-                </ul>
-                <section>
-                    <h2>Cooking Instructions</h2>
-                    {steps.map((step, i)=>(
-                        <p key={i}>
-                            {step}
-                        </p>
-                    ))}
-                </section>
+                <IngredientList ingredients={ingredients} />
+                <IngredientsStep title="Cooking Instructions" steps={steps} />
             </section>
         </>
     )
