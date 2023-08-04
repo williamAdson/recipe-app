@@ -1,3 +1,4 @@
+import Contact from "./Contact";
 import Recipe from "./Recipe";
 
 function Menu(props){
@@ -6,6 +7,7 @@ function Menu(props){
             <article>
                 <header>
                     <h1>{props.title}</h1>
+                    <Contact></Contact>
                 </header>
                 <div>
                     {props.recipes.map((recipe, i)=>(

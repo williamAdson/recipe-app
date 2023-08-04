@@ -1,5 +1,6 @@
 import IngredientList from './IngredientsList'
 import IngredientsStep from './IngredientsStep';
+import StarRating from './StarRating';
 
 function Recipe({name, ingredients, steps}){
     return(
@@ -9,6 +10,7 @@ function Recipe({name, ingredients, steps}){
                 <IngredientList ingredients={ingredients} />
                 <IngredientsStep title="Cooking Instructions" steps={steps} />
             </section>
+            <StarRating></StarRating>
         </>
     )
 }
